@@ -1,0 +1,289 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: hsl(192, 100%, 9%);
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Button Styles */
+.btn {
+    padding: 12px 50px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: hsl(322, 100%, 66%);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: hsl(322, 100%, 76%);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: hsl(192, 100%, 9%);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    color: hsl(208, 11%, 55%);
+}
+
+/* Header and Navigation */
+.hero {
+    background-color: hsl(193, 100%, 96%);
+    padding: 40px 80px;
+    background-image: url('bg-hero-desktop.svg');
+    background-size: cover;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo {
+    width: 200px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+}
+
+.hero-text p {
+    margin-bottom: 32px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+/* Features Section */
+.features {
+    padding: 120px 80px;
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    padding: 60px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+}
+
+.feature-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h2 {
+    margin-bottom: 16px;
+}
+
+.feature-text p {
+    color: hsl(208, 11%, 55%);
+}
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    background-color: white;
+    transform: translateY(50%);
+}
+
+.cta h2 {
+    margin-bottom: 32px;
+}
+
+/* Footer */
+footer {
+    background-color: hsl(192, 100%, 9%);
+    color: white;
+    padding: 180px 80px 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+}
+
+.footer-info {
+    max-width: 360px;
+}
+
+.footer-logo {
+    margin-bottom: 24px;
+}
+
+.contact p {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.footer-links ul {
+    list-style: none;
+    columns: 2;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-links a {
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: hsl(322, 100%, 66%);
+    border-color: hsl(322, 100%, 66%);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 24px;
+        text-align: center;
+        background-image: url('bg-hero-mobile.svg');
+    }
+
+    .nav {
+        margin-bottom: 40px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .btn {
+        padding: 8px 24px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.75rem;
+    }
+
+    .features {
+        padding: 60px 24px;
+    }
+
+    .feature-card {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+        padding: 40px 24px;
+    }
+
+    .feature-card.reverse {
+        flex-direction: column-reverse;
+    }
+
+    .cta {
+        margin: 0 24px;
+        padding: 40px 24px;
+    }
+
+    footer {
+        padding: 120px 24px 40px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-links ul {
+        columns: 1;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .contact p {
+        gap: 12px;
+    }
+}
